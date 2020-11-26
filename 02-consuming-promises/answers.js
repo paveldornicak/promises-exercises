@@ -6,8 +6,11 @@
  * @param {thunk} action
  * 
  */
-function waitForPromise(promise, action){
+function waitForPromise(promise, action) {
   /* IMPLEMENT ME */
+  const result = promise.catch();
+  result.then();
+  console.log(result);
 }
 /**
  * 
@@ -17,7 +20,7 @@ function waitForPromise(promise, action){
  * @param {consumer} consumer 
  * @param {handler} handler 
  */
-function consumePromise(promise, consumer, handler){
+function consumePromise(promise, consumer, handler) {
   /* IMPLEMENT ME! */
 }
 
