@@ -9,8 +9,7 @@
 function waitForPromise(promise, action) {
   /* IMPLEMENT ME */
   const result = promise.catch();
-  result.then();
-  console.log(result);
+  result.then(action);
 }
 /**
  * 
@@ -22,7 +21,13 @@ function waitForPromise(promise, action) {
  */
 function consumePromise(promise, consumer, handler) {
   /* IMPLEMENT ME! */
-}
+  promise.then(result => {
+    consumer(result);
+  }).catch(result => {
+    handler(result);
+  })
+};
+
 
 /**
  * @callback thunk
